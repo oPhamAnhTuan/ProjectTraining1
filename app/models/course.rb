@@ -53,4 +53,19 @@ class Course < ApplicationRecord
   def update_rating
     update_column :rate_average, Rating.where(course_id: id).average(:rating).to_f.round(1)
   end
+
+  def load_structure
+    result = {
+      id: id,
+      name: name,
+      description: description,
+      thumbnail: thumbnail,
+      rate_average: rate_average,
+      user_id: user_id,
+      category_id: category_id,
+      ratings: ratings,
+      comments: comments
+    }
+    result
+  end
 end

@@ -21,6 +21,14 @@ class User < ApplicationRecord
 
   scope :can_post_course, -> { where(role: roles.except(:student).values).collect{|user| [user.name, user.id]} }
 
+  scope :select_user, -> { select(:id, :name, :email, :role, :avatar) }
+
+  scope :not_manager?, -> { where.not role: roles[:admin] }
+
+  scope :not_me?, (lambda do |user_id|
+    where.not id: user_id
+  end)
+
   scope :search_users, (lambda do |text_search|
     ransack(name_cont: text_search).result    
   end)
