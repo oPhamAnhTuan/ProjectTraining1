@@ -1,0 +1,4 @@
+development:
+  base_path: "http://localhost:3000"
+production:
+  base_path: "https://edulearning-traning.herokuapp.com/"
