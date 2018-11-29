@@ -57,7 +57,8 @@ class Course < ApplicationRecord
   end
 
   def price_sale
-    price * (100 - percent_sale) / 100
+    # price * (100 - percent_sale) / 100
+    price
   end
 
   def load_structure
