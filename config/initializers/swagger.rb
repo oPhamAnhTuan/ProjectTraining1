@@ -11,7 +11,7 @@ Swagger::Docs::Config.register_apis(
     "1.0" =>  {
       api_extension_type: :json,
       api_file_path: "public/apidocs",
-      base_path: ENV["base_path"],
+      base_path: "https://edulearning-traning.herokuapp.com/",
       clean_directory: true,
       attributes: {
         info: {
