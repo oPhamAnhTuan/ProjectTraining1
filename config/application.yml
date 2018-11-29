@@ -1,0 +1,5 @@
+development:
+  base_path: "http://localhost:3000"
+production:
+  base_path: "https://edulearning-traning.herokuapp.com/"
+  SECRET_KEY_BASE: "168763c54034b1ef131152b3d0e8a0b5b495f48ecb8257a78ef76b499fcee9cd7f0fecf79af5a833013d17b9d157df0a0676961e6827f30abd30875ef29b31c6"

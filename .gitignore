@@ -51,11 +51,12 @@ config/database.yml
 config/credentials.yml.enc
 
 # Ignore application configuration
-/config/application.yml
+# /config/application.yml
 
 config/environments/*.local.yml
-config/secrets.yml
+# config/secrets.yml
 config/settings.local.yml
 config/settings/*.local.yml
 public/uploads
 public/apidocs
+
