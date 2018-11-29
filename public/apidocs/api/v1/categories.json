@@ -1,0 +1,80 @@
+{
+  "apiVersion": "1.0",
+  "swaggerVersion": "1.2",
+  "basePath": "https://edulearning-traning.herokuapp.com",
+  "resourcePath": "categories",
+  "apis": [
+    {
+      "path": "/api/categories.json",
+      "operations": [
+        {
+          "summary": "Fetches all category items",
+          "notes": "This lists all the Categorys",
+          "parameters": [
+            {
+              "paramType": "form",
+              "name": "locale",
+              "type": "string",
+              "description": "Language local (en/vi)",
+              "required": true
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "responseModel": null,
+              "message": "Sussces"
+            },
+            {
+              "code": 404,
+              "responseModel": null,
+              "message": "Category not found"
+            }
+          ],
+          "nickname": "Api::V1::Categories#index",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/api/categories/{id}.json",
+      "operations": [
+        {
+          "summary": "Fetches all courses items in Categrory",
+          "notes": "This lists all the courses",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "category Id",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "locale",
+              "type": "string",
+              "description": "Language local (en/vi)",
+              "required": true
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "responseModel": null,
+              "message": "Sussces"
+            },
+            {
+              "code": 404,
+              "responseModel": null,
+              "message": "Category not found"
+            }
+          ],
+          "nickname": "Api::V1::Categories#show",
+          "method": "get"
+        }
+      ]
+    }
+  ],
+  "authorizations": null
+}
