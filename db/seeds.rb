@@ -64,3 +64,11 @@ end
     course_id: Course.order("RAND()").first.id
   )
 end
+
+codes = {"IJQW213VCJ" => 20000, "L5X0CUJJBR" => 50000, "056CVPOSRB" => 100000, "PWRVA15YBZ" => 20000, "T9R88YZD3J" => 500000}
+codes.each do |key, value|
+  Giffcode.create!(
+    code: key,
+    value: value
+  )
+end
