@@ -10,7 +10,7 @@ Swagger::Docs::Config.register_apis(
   {
     "1.0" =>  {
       api_extension_type: :json,
-      api_file_path: "public/apidocs",
+      api_file_path: "public/apidocs/",
       base_path: ENV["base_path"],
       clean_directory: true,
       attributes: {
